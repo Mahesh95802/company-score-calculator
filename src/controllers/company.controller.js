@@ -18,7 +18,7 @@ const fetchCompanyDataBySector = async (req, res) => {
     try {
         console.log('fetchCompanyData controller called')
         const sector = req.query.sector;
-        res.status(200).send(await companyService.fetchCompanyDataBySector(sector));
+        res.status(200).json(await companyService.fetchCompanyDataBySector(sector));
     } catch(err) {
         if (err instanceof HttpErrors) {
             res.status(err.code).json({ 'message': err.message });
@@ -31,7 +31,7 @@ const updateCompanyData = async (req, res) => {
     try {
         console.log('updateCompanyData controller called')
         const companyId = req.params.companyId;
-        res.status(200).send(await companyService.updateCompanyData(companyId, req.body));
+        res.status(200).json(await companyService.updateCompanyData(companyId, req.body));
     } catch(err) {
         if (err instanceof HttpErrors) {
             res.status(err.code).json({ 'message': err.message });
