@@ -114,8 +114,8 @@ const saveData = async (url) => {
             }
         )
     }
-    // return { companyDetails: companyDetailsResponse, companyPerformance: companyPerformance };
-    return companyPerformance;
+    return { companyDetails: companyDetailsResponse, companyPerformance: companyPerformance };
+    // return companyPerformance;
 }
 
 const fetchCompanyDataBySector = async (sector) => {
