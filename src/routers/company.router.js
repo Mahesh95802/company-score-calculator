@@ -1,9 +1,9 @@
 const companyRouter = require('express').Router();
 
-const { saveData, fetchCompanyData } = require('../controllers/company.controller');
+const { saveData, fetchCompanyDataBySector, updateCompanyData } = require('../controllers/company.controller');
 
 companyRouter.post('/api/save', saveData);
-
-companyRouter.get('/company/:id', fetchCompanyData);
+companyRouter.get('/api/companies', fetchCompanyDataBySector);
+companyRouter.put('/api/company/:companyId', updateCompanyData);
 
 module.exports = companyRouter;

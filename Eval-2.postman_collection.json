@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "93daec43-2516-4962-9caa-8e77dfc34f6c",
+		"name": "Eval-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25265699"
+	},
+	"item": [
+		{
+			"name": "Save Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"urlLink\": \"https://store-0001.s3.amazonaws.com/input.csv\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Company Data By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/companies?sector=Software",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"companies"
+					],
+					"query": [
+						{
+							"key": "sector",
+							"value": "Software"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Company Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"companyCEO\": \"Mahesh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/company/e90a7bc7-47fa-49af-bfa1-391fe7768b56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"company",
+						"e90a7bc7-47fa-49af-bfa1-391fe7768b56"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
