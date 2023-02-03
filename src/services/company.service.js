@@ -25,7 +25,7 @@ const fetchCompanyDetails = async (url) => {
             companyName: companyInfo.name,
             // companyDescription: companyInfo.description,
             companyCEO: companyInfo.ceo,
-            compantTags: companyInfo.tags
+            companyTags: companyInfo.tags
         })
     }
     // console.log("companyDetails", companyDetails)
