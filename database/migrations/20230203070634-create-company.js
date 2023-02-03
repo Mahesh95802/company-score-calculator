@@ -10,6 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       companyId: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       companySector: {
