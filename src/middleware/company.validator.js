@@ -3,7 +3,7 @@ const Joi = require('joi');
 const HttpErrors = require('../errors/httperror');
 
 const saveDataSchema = Joi.object({
-  urlLink: Joi.string().min(3).max(30).required(),
+  urlLink: Joi.string().min(3).max(1000).required(),
 });
 
 const updateDataSchema = Joi.object({
